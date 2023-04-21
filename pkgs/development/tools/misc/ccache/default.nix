@@ -1,16 +1,16 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, substituteAll
-, binutils
-, asciidoctor
-, cmake
-, perl
-, zstd
+{ asciidoctor
 , bashInteractive
-, xcodebuild
+, binutils
+, cmake
+, fetchFromGitHub
+, lib
 , makeWrapper
 , nix-update-script
+, perl
+, stdenv
+, substituteAll
+, xcodebuild
+, zstd
 }:
 
 stdenv.mkDerivation (finalAttrs: {
