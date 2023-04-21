@@ -1,6 +1,6 @@
 { asciidoctor
 , bashInteractive
-, binutils
+, buildPackages
 , cmake
 , fetchFromGitHub
 , lib
@@ -33,7 +33,7 @@ stdenv.mkDerivation (finalAttrs: {
     # Darwin.
     (substituteAll {
       src = ./force-objdump-on-darwin.patch;
-      objdump = "${binutils.bintools}/bin/objdump";
+      objdump = "${buildPackages.binutils.bintools}/bin/objdump";
     })
   ];
 
