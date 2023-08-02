@@ -31,7 +31,7 @@ cxxLibrary=1
 cInclude=1
 
 expandResponseParams "$@"
-linkType=$(checkLinkType "${params[@]}")
+linkType=$(checkLinkType "${params[@]}" ${NIX_CFLAGS_LINK_@suffixSalt@:-})
 
 declare -ag positionalArgs=()
 declare -i n=0
